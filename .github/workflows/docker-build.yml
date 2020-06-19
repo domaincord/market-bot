@@ -25,6 +25,7 @@ jobs:
         GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
         REGISTRY_URL: "gcr.io"
+        TOKEN: ${{ secrets.TOKEN }}
       with:
        image_name: "market-bot"
        image_tag: "latest"
