@@ -2,11 +2,16 @@
     "name": "domaincord-market-bot",
     "private": false,
     "dependencies": {
+      "axios": "^0.19.2",
       "discord.js": "^11.5.1",
       "dotenv": "^8.2.0",
-      "firebase-admin": "^8.12.1"
+      "email-templates": "^7.0.5",
+      "firebase-admin": "^8.12.1",
+      "psl": "^1.8.0",
+      "pug": "^3.0.0"
     },
     "scripts": {
-      "start": "node index.js"
+      "start": "node index.js",
+      "dev": "NODE_ENV=development nodemon index.js"
     }
   }
