@@ -19,13 +19,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Docker Login Build Tag Push
+    - name: Build and Push
       uses: zemuldo/docker-build-push@v1.0
       env:
         GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
         REGISTRY_URL: "gcr.io"
-        TOKEN: ${{ secrets.TOKEN }}
       with:
        image_name: "market-bot"
        image_tag: "latest"

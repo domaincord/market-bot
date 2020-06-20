@@ -73,7 +73,11 @@ client.on('messageReactionAdd', async (messageReaction, user) => {
   const { message } = messageReaction
 })
 
-client.login(process.env.TOKEN)
+if (process.env.TOKEN !== null) {
+  client.login(process.env.TOKEN)
+} else {
+  console.error('Bot token is empty!')
+}
 
 module.exports = {
   apiUrl,
